@@ -1,0 +1,62 @@
+ Reubicación y mejora avanzada del módulo de reordenamiento de citas
+1. 📍 Reubicación de la interfaz de control
+
+La interfaz de control de orden (compuesta por los botones de subir, bajar, número y arrastre) deberá reubicarse desde el lateral derecho de cada cita al lateral izquierdo, manteniéndose alineada verticalmente con el centro de la cita.
+
+    Esta interfaz debe ocupar un ancho mínimo, suficiente para alojar sus controles sin invadir el contenido principal de la cita.
+
+    El diseño debe ser compacto y estético, sin desbalancear el bloque visual general de la cita.
+
+2. 🧲 Funcionalidad del botón de arrastre (cuarto botón)
+
+El cuarto botón, ubicado en la parte inferior de la interfaz lateral de control, será un botón de arrastre por pulsación prolongada para reorganizar citas.
+🔄 Comportamiento actual a evitar
+
+Actualmente, al arrastrar este botón:
+
+    Solo se desplaza la interfaz de control.
+
+    La cita completa permanece fija en su lugar.
+
+Este comportamiento debe ser corregido completamente.
+3. 🆕 Nuevo comportamiento requerido
+
+Al mantener pulsado este botón de arrastre:
+
+    La cita completa (no solo la interfaz de botones) deberá:
+
+        Elevarse ligeramente (animación de elevación o sombra para indicar el estado "drag").
+
+        Desacoplarse visualmente del flujo estático.
+
+        Seguir el movimiento del dedo o cursor únicamente en eje vertical.
+
+        Pasar por encima del resto de las citas con una animación fluida.
+
+4. 🧠 Lógica de inserción al soltar
+
+Cuando el usuario suelte la cita:
+
+    El sistema detectará la posición del puntero respecto a las citas adyacentes:
+
+        Si se suelta entre dos citas → la cita se insertará exactamente entre ellas.
+
+        Si se suelta encima de otra cita:
+
+            Se insertará encima si se suelta en la mitad superior de la cita objetivo.
+
+            Se insertará debajo si se suelta en la mitad inferior.
+
+5. 👁️‍🗨️ Indicador visual de posición prevista
+
+Durante el movimiento:
+
+    Deberá mostrarse una animación o guía visual clara que indique la posición final de la cita antes de que sea soltada.
+
+        Esta guía puede ser, por ejemplo:
+
+            Una línea de inserción entre las citas destino.
+
+            O un espacio visual de reserva indicando dónde se colocará la cita si se suelta.
+
+Esto proporciona al usuario retroalimentación anticipada, mejorando la precisión e intuición de la interacción táctil.

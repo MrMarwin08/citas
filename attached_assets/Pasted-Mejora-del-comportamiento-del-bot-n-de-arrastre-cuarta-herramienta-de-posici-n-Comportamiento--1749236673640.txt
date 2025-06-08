@@ -1,0 +1,54 @@
+Mejora del comportamiento del botón de arrastre (cuarta herramienta de posición)
+🛠 Comportamiento actual incorrecto:
+
+    Al arrastrar la cita:
+
+        La cita no sigue con fluidez el movimiento del dedo o cursor, sino que responde con retardo o necesita movimientos muy amplios para desplazarse.
+
+        No se muestra claramente dónde se insertará la cita al soltarla.
+
+        En pantallas con muchas citas, no se produce desplazamiento automático (scroll) al llegar al límite visual de la pantalla.
+
+✅ Comportamiento esperado:
+
+    Movimiento sincronizado y preciso:
+
+        La cita que se está arrastrando debe seguir con precisión el dedo o el cursor, estando alineada en todo momento con el punto de contacto del usuario.
+
+        No debe haber retardo ni necesidad de realizar movimientos excesivos para desplazarla.
+
+    Guía visual de inserción:
+
+        Durante el arrastre, debe aparecer una línea horizontal entre las citas, indicando exactamente dónde se insertará la cita al soltarla.
+
+        Esta línea debe ser clara, delgada y animada para que el usuario tenga feedback inmediato de la posición de destino.
+
+    Comportamiento inteligente en scroll:
+
+        Cuando el usuario arrastre una cita hacia fuera del área visible (por ejemplo, hacia la parte inferior o superior de la pantalla), la lista debe hacer scroll automático en esa dirección.
+
+        Este scroll debe ser progresivo y sensible a la dirección del movimiento.
+
+    Ajuste progresivo y fluido del foco:
+
+        La cita que se encuentra justo debajo de la cita que se está moviendo debe:
+
+            Desplazarse ligeramente, dejando espacio visible entre ella y la cita anterior.
+
+            Esa separación se usará para mostrar la línea de inserción.
+
+            De este modo, la interfaz indica visualmente al usuario que la cita arrastrada será colocada justo ahí si se suelta.
+
+        A medida que el usuario continúe desplazando la cita hacia arriba o hacia abajo, este efecto de separación debe ir afectando progresivamente a la siguiente cita en la dirección del arrastre.
+
+🧭 Objetivo final
+
+    Aumentar la precisión, naturalidad y claridad del sistema de reordenamiento de citas.
+
+    Garantizar que:
+
+        El interfaz lateral no robe espacio útil de lectura.
+
+        Las citas sean fácilmente manipulables y reposicionables.
+
+        El usuario entienda visualmente dónde quedará ubicada la cita antes de soltarla, con una experiencia táctil fluida y reactiva.

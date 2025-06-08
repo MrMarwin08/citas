@@ -1,0 +1,105 @@
+Correcciones y mejoras en la gestión visual y funcional de Colecciones
+1. ✅ Actualización automática del contador de citas en cada colección
+
+    Problema actual:
+    El número que indica cuántas citas hay en una colección (debajo del nombre de la colección, en el texto: "0 citas") no se actualiza automáticamente cuando se añaden o eliminan citas.
+
+    Solución requerida:
+
+        El número de citas debe reflejar en tiempo real el total de citas contenidas en la colección.
+
+        Esto debe actualizarse automáticamente cada vez que:
+
+            Se añade una cita desde la ventana emergente.
+
+            Se elimina una cita de la colección (usando la ❌).
+
+        Es probable que este dato deba vincularse correctamente a la base de datos PostgreSQL, usando una consulta que devuelva el recuento actual de citas por colección cada vez que se renderice la vista o se haga un cambio.
+
+2. 🗑️ Sustitución de los tres puntos por un icono de basura roja para eliminar la colección
+
+    Estado actual:
+    En la esquina inferior derecha de cada miniatura de colección hay un icono de tres puntos (⋮) para acceder a opciones adicionales.
+
+    Cambio solicitado:
+
+        Eliminar el icono de tres puntos.
+
+        Sustituirlo directamente por un icono de papelera roja visible en la misma posición.
+
+        Al pulsarlo:
+
+            Se debe mostrar un mensaje de confirmación personalizado (no nativo del sistema operativo), advirtiendo que la colección se eliminará permanentemente.
+
+            Si el usuario confirma, se debe:
+
+                Eliminar la colección de la base de datos.
+
+                Eliminar también todas las relaciones entre esa colección y las citas asociadas.
+
+3. ⚙️ Opciones funcionales dentro de cada cita en una colección
+
+    Estado actual:
+    Las siguientes opciones aparecen en cada cita dentro de una colección, pero no están funcionando correctamente:
+
+        Favorito
+
+        Memorizar
+
+        Compartir
+
+    Cambios necesarios:
+
+A) Favorito
+
+    Cuando se pulsa el botón de estrella:
+
+        La cita debe agregarse a la tabla correspondiente en la base de datos que gestiona las "Favoritas".
+
+        También debe actualizar la pestaña "Favoritas" para reflejar la adición o eliminación.
+
+        Visualmente, el botón debe cambiar su color o estado para indicar si la cita ya está marcada como favorita.
+
+B) Memorizar
+
+    Cuando se pulsa el icono de "memorizar":
+
+        La cita debe guardarse correctamente en la base de datos dentro de la sección "Memorizadas".
+
+        Debe aparecer reflejada automáticamente en la pestaña "Memorizadas".
+
+C) Compartir
+
+    Cuando se pulsa el botón de compartir:
+
+        Debe abrir el menú nativo del sistema (Android/iOS) para compartir el texto de la cita a través de:
+
+            WhatsApp
+
+            Instagram
+
+            Correo electrónico
+
+            Otras apps disponibles en el dispositivo
+
+🛠️ Consideraciones técnicas
+
+    Estas funciones de añadir a Favoritos o Memorizadas requieren:
+
+        Actualizar los registros correspondientes en la base de datos PostgreSQL.
+
+        Usar el identificador único de cada cita y usuario para hacer relaciones correctas en las tablas de favoritos y memorizadas.
+
+        El sistema debe evitar duplicados y permitir eliminar estas relaciones con un nuevo clic.
+
+📱 Formato y compatibilidad
+
+    Todos los elementos deben funcionar y mostrarse correctamente en dispositivos móviles con relación de aspecto 16:9 o 18:9, sin generar márgenes extra, cortes, ni solapamientos.
+
+    La app debe mantener la estética y usabilidad incluso en pantallas verticales muy alargadas.
+
+
+Tipo de aplicación: Multiplataforma (iOS y Android)
+Formato objetivo: Solo dispositivos móviles (relación de aspecto vertical, 16:9 / 18:9)
+Base de datos funcional:
+postgresql://neondb_owner:npg_qOIUAGwW4N9p@ep-cool-dust-a2xjgv3q-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require

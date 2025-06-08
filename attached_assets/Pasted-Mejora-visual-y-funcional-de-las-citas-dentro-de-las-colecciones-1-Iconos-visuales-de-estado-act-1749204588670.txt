@@ -1,0 +1,60 @@
+Mejora visual y funcional de las citas dentro de las colecciones
+1. 🎨 Iconos visuales de estado activo en Favoritas y Memorizadas
+
+    Situación actual:
+    En el resto de la aplicación (como en las pestañas Todas, Favoritas y Memorizadas), los iconos de Favoritas (estrella) y Memorizar (cerebro) ya muestran un color distintivo cuando una cita ha sido añadida correctamente:
+
+        Estrella: amarillo cuando está en Favoritas.
+
+        Cerebro: morado cuando está en Memorizadas.
+
+    Cambio requerido:
+    En cada colecciones de citas, donde también están disponibles estas dos opciones por cada cita, se debe implementar el mismo comportamiento visual:
+
+        La estrella debe mostrarse rellena de amarillo si esa cita ya está en Favoritas.
+
+        El cerebro debe mostrarse relleno de morado si ya está en Memorizadas.
+
+    Estilo y funcionalidad:
+    La implementación debe seguir exactamente el mismo estilo y lógica funcional que ya está activa en el resto de la biblioteca.
+
+    Objetivo:
+    Unificar la experiencia visual y de interacción para que el usuario tenga coherencia visual clara, y pueda identificar fácilmente si una cita ya ha sido añadida a esas pestañas sin necesidad de comprobarlo manualmente.
+
+🧱 Comportamiento correcto del mensaje de confirmación al eliminar una colección
+
+    Problema actual:
+    Al eliminar una colección, aparece un mensaje de confirmación (“¿Deseas eliminar esta colección?”).
+    Sin embargo, al pulsar "Cancelar" o "Eliminar", el toque también se propaga a la interfaz de fondo, provocando efectos no deseados, como entrar sin querer en una colección.
+
+    Solución requerida:
+
+        El mensaje de confirmación debe bloquear completamente la interacción con el fondo mientras esté visible.
+
+        Se debe implementar un fondo modal opaco e interceptar los eventos de toque, de modo que solo se procesen los clics dentro de la ventana emergente y no se transmita ningún toque a la interfaz principal.
+
+📜 Escrolleo dentro de la pantalla de cada colección
+
+    Problema actual:
+    Cuando una colección contiene muchas citas, no es posible hacer scroll, lo que impide ver o acceder a todas las citas almacenadas.
+
+    Solución requerida:
+
+        La lista de citas debe ser escroleable verticalmente.
+
+        El scroll debe afectar únicamente a la zona de las citas.
+
+        Elementos fijos (no desplazables):
+
+            Flecha de retorno
+
+            Título de la colección
+
+            Botón “Añadir cita”
+
+    Ejemplo de referencia para el comportamiento esperado:
+    Como en una tienda online móvil, donde:
+
+        El encabezado con el logo, filtros o carrito permanece visible,
+
+        Y solo la sección de productos puede desplazarse verticalmente.

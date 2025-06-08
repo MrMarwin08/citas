@@ -1,0 +1,117 @@
+1. Animación de Scroll Tipo Redes Sociales:
+Descripción funcional y visual esperada:
+
+Quiero que el desplazamiento vertical entre pantallas o secciones se comporte como en redes sociales (por ejemplo, TikTok o Instagram Reels), donde al hacer scroll hacia arriba o abajo:
+
+La página superior se desliza hacia afuera con una animación fluida.
+
+La nueva página (inferior o superior) aparece progresivamente, con un efecto de transición suave, como un deslizamiento o desvanecimiento sincronizado.
+
+Debe sentirse como si estuvieras "pasando páginas" o navegando entre bloques visuales bien diferenciados.
+
+Requisitos técnicos:
+
+Compatible con Flutter, React Native o nativo (según el stack actual).
+
+Soporte para animaciones controladas por scroll o swipe.
+
+Optimización para 60 FPS.
+
+Uso de AnimatedSwitcher, PageView, ScrollController o librerías especializadas si aplica.
+
+2. Funcionalidad del Perfil de Usuario:
+Componentes del perfil:
+
+Editar nombre de usuario.
+
+Cambiar imagen de perfil.
+
+Seleccionar idioma: soporte mínimo para Inglés, Español y Alemán.
+
+Elegir horario de notificaciones personalizadas.
+
+Requisitos funcionales:
+
+Interfaz intuitiva y profesional.
+
+Guardado persistente de los cambios (en base local y/o sincronizado con servidor).
+
+Soporte para DateTimePicker para establecer horario personalizado.
+
+Selección de idioma mediante Dropdown o SegmentedControl.
+
+3. Diseño del Módulo de Citas Motivacionales (Global y Personal):
+Diseño visual y estructura esperada:
+Cada cita debe presentarse como un bloque separado y estéticamente cuidado. El orden de los elementos debe ser el siguiente:
+
+💬 Cita principal destacada (tipografía grande y elegante):
+“Somos lo que hacemos repetidamente. La excelencia no es un acto, sino un hábito.”
+— Aristóteles
+
+📘 Explicación clara y breve (texto más pequeño, legible):
+Esta frase explica que lo importante no es lo que haces ocasionalmente, sino lo que haces cada día. Tus hábitos te definen más que tus intenciones.
+
+🔽 Desplegable opcional con desarrollo completo del mensaje:
+Contenido más extenso, con ejemplos reales y lenguaje sencillo.
+
+Ejemplos conocidos (como el de Jerry Seinfeld, Stephen King).
+
+Comparaciones visuales como la metáfora del hielo que no se derrite hasta que pasa de 0°C.
+
+Recomendaciones prácticas accionables que el usuario puede aplicar hoy mismo.
+
+
+Estructura visual deseada:
+Diseñar un componente donde cada cita aparezca como una tarjeta independiente, que incluya:
+
+Ejemplo de formato exacto que quiero replicar:
+
+Cita real:
+“Somos lo que hacemos repetidamente. La excelencia no es un acto, sino un hábito.”
+— Aristóteles
+
+Explicación clara y simple:
+Esta frase quiere decir que no importa lo que haces de vez en cuando, sino lo que haces todos los días. Si quieres ser bueno en algo, no tienes que hacer algo espectacular una vez, sino algo pequeño muchas veces. Lo que repites se convierte en parte de ti.
+
+Desarrollo con ejemplos reales y lenguaje claro:
+[... contenido extendido con ejemplos de Seinfeld, Stephen King, etc.]
+
+Ejemplos prácticos para aplicar hoy mismo:
+- Si quieres leer más, empieza con una página al día.
+- Si quieres hacer ejercicio, empieza con 5 sentadillas al día.
+- Si quieres dejar de procrastinar, trabaja solo 5 minutos.
+
+Para recordar:
+Tu vida no cambia cuando haces algo grande una vez. Cambia cuando haces algo pequeño todos los días, sin fallar.
+
+
+
+Requisitos técnicos:
+
+Soporte para componentes plegables (Expandable, Accordion, etc.).
+
+Separación clara entre texto destacado, explicación y desarrollo.
+
+Estilo visual minimalista, enfocado en la lectura: fondo claro u oscuro según tema, buena jerarquía tipográfica.
+
+Opcional:
+
+Icono de guardar cita o marcar como favorita.
+
+Posibilidad de compartir la cita en redes sociales.
+
+🎨 Estética y experiencia general:
+Diseño moderno, limpio y profesional.
+
+Interfaces adaptables a temas claro/oscuro.
+
+Buen uso del espaciado, animaciones sutiles y transiciones suaves.
+
+Experiencia UX centrada en el usuario final: claridad, fluidez y personalización.
+
+📌 Extras (opcional pero recomendado):
+Multilenguaje desde inicio (usando i18n).
+
+Soporte para guardar progreso o citas favoritas.
+
+Base escalable para añadir más tipos de contenido motivacional (vídeos, imágenes, retos diarios).

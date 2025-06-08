@@ -1,0 +1,55 @@
+Reposicionamiento de elementos en el interior de las colecciones
+🎯 Objetivo:
+
+Alinear todos los elementos de la pantalla interior de una colección a la misma posición vertical exacta que sus equivalentes en las otras secciones de la biblioteca (como “Mi Biblioteca”, “Favoritas”, “Todas” o “Memorizadas”), eliminando inconsistencias de márgenes superiores o separaciones.
+1. 🧩 Encabezado (Header) de la colección
+
+Elementos:
+
+    Flecha de retorno
+
+    Título con el nombre de la colección
+
+    Icono de edición del título (lapiz)
+
+Reposicionamiento requerido:
+
+    La flecha, el título y el icono de edición deben estar alineados horizontalmente en una sola fila y alineados verticalmente a la misma altura exacta que el título “Mi Biblioteca” en el resto de apartados.
+
+    La posición vertical de este encabezado debe igualarse usando los mismos valores de paddingTop, marginTop, height o el sistema de diseño que se esté utilizando (Tailwind, estilos locales o layout con Flexbox).
+
+    Asegurarse de que no hay espacio extra superior entre el borde superior de la pantalla y este grupo de elementos. Esto se puede verificar visualmente comparando directamente con la vista general de la biblioteca.
+
+2. 📌 Pestañas dentro de la colección
+
+Elementos:
+
+    Pestañas: Todas, Favoritas, Memorizadas, Colecciones
+
+Reposicionamiento requerido:
+
+    Estas pestañas deben estar colocadas exactamente a la misma altura vertical que en el resto de vistas de la biblioteca.
+
+    El espaciado entre el encabezado (título + flecha + icono de edición) y las pestañas debe ser idéntico al espaciado presente en las secciones externas.
+
+    Las pestañas deben mantener el mismo tamaño, tipografía, color, espaciado lateral y margen inferior que en el resto de apartados.
+
+    Cualquier diferencia en espaciado debe eliminarse replicando los mismos valores de estilo y separación usados fuera de las colecciones.
+
+3. 🧷 Elementos inferiores (botón de añadir cita + lista de citas)
+
+Reposicionamiento requerido:
+
+    Estos elementos deben colocarse por debajo del bloque de pestañas, con suficiente margen para no quedar pegados visualmente.
+
+    Se debe aplicar un espacio adicional inferior para que el encabezado y las pestañas respiren visualmente, replicando la jerarquía vertical de toda la app.
+
+    Se sugiere usar un paddingTop o marginTop coherente con el que existe entre pestañas y contenido principal en la pantalla principal de la biblioteca.
+
+🧪 Nota técnica final:
+
+    Se debe eliminar cualquier offset o margen específico que haya sido aplicado únicamente dentro de las colecciones y que provoque diferencias verticales.
+
+    Se recomienda inspeccionar el código fuente y comparar valores exactos de estilo usados en los componentes de encabezado y pestañas de la biblioteca para aplicar los mismos dentro de cada colección.
+
+    Si se está utilizando una arquitectura modular o basada en componentes compartidos, reutilizar el mismo componente visual para mantener la consistencia.

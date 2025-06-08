@@ -1,0 +1,58 @@
+Cambios en el comportamiento y diseño de las colecciones
+1. Visualización de citas dentro de una colección (estado actual y cambio requerido):
+
+Actualmente, al acceder a una colección:
+
+    Cada cita aparece en formato de tarjeta vertical, ocupando todo el ancho de la pantalla.
+
+    En la parte superior derecha de cada cita aparece una "❌" (X roja) que debe ser eliminada.
+
+    En la parte inferior derecha aparece el icono de papelera roja, utilizado actualmente para eliminar citas por completo (como en la Biblioteca general).
+
+Cambio solicitado:
+
+    El icono de papelera roja debe eliminarse de las citas dentro de las colecciones.
+
+    En su lugar, se debe añadir una "❌" (X roja) en la parte inferior derecha de cada cita. Esta X servirá exclusivamente para quitar la cita de la colección actual, sin eliminarla de la biblioteca, Favoritas o Memorizadas.
+
+    Ambas Xs no deben coexistir, así que se elimina la superior y se conserva solo la nueva en la parte inferior derecha, como sustituto funcional y visual.
+
+2. Ventana emergente para añadir citas a una colección:
+
+Estado actual:
+
+    En cada colección, hay un botón visible llamado “Añadir cita”.
+
+    Al pulsarlo, se abre una ventana emergente donde se muestran todas las citas de la biblioteca general.
+
+    En esta ventana:
+
+        Las citas aparecen en formato solo texto (sin autor ni metadatos).
+
+        Junto a cada cita hay un botón “+”, que al pulsarse cambia a un tic (✓) indicando que ha sido seleccionada para añadirse.
+
+        Una vez seleccionadas las citas, el usuario debe pulsar “Añadir” para confirmarlas.
+
+Problema actual:
+
+    Cuando el usuario vuelve a pulsar “Añadir cita” después de haber añadido previamente citas, la ventana emergente no muestra las citas ya añadidas. Esto impide revisar qué ya ha sido agregado o hacer cambios.
+
+Cambio solicitado:
+
+    Al pulsar “Añadir cita”, la ventana emergente debe:
+
+        Mostrar todas las citas disponibles en la biblioteca.
+
+        Las citas que ya forman parte de la colección actual deben aparecer con el icono de tic (✓) desde el principio, para dejar claro que ya están incluidas.
+
+El + y el tic deben estar en la misma posición y deben estar ambos centrados verticalmente en cada cita.
+
+        El usuario debe poder quitar el tic para desasignar una cita y volver a pulsar + para añadirla nuevamente.
+
+        Este sistema permitirá gestionar citas de forma más ágil e intuitiva.
+
+    Los botones inferiores de la ventana emergente deben cambiar de “Cancelar” y “Añadir” a “Cancelar” y “Guardar”, reflejando mejor el flujo de edición de una colección.
+
+3. Color del texto:
+
+    El color del texto dentro de las colecciones y en la ventana emergente para añadir citas debe ser claro (tonos blancos o gris claro), para garantizar una buena legibilidad sobre el fondo oscuro de la app.

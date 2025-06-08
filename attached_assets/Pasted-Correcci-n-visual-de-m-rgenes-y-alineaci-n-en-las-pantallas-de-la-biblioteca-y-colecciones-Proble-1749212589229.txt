@@ -1,0 +1,31 @@
+Corrección visual de márgenes y alineación en las pantallas de la biblioteca y colecciones
+🧭 Problema de percepción visual:
+
+Aunque los elementos dentro de las colecciones (título, flecha, icono de edición y pestañas) tienen el mismo color, tamaño, separación, tipografía y estilo que en el resto de pestañas de la biblioteca (Todas, Favoritas, Memorizadas), visualmente parecen estar más altos.
+
+📌 Causa real:
+En las pestañas principales de la biblioteca hay un margen superior (padding o espacio vacío) del mismo color que el fondo (#111827). Aunque es invisible por tener el mismo color, ese margen existe y empuja visualmente hacia abajo el contenido (como el título “Mi Biblioteca”).
+Sin embargo, en el interior de las colecciones ese margen no existe, lo que hace que los elementos parezcan estar en una posición superior, aunque tengan el mismo estilo.
+✅ Solución técnica:
+
+Se debe hacer un análisis del código para detectar cómo se está generando este margen superior en la vista principal de la biblioteca. A partir de ahí:
+
+    Opción A – Eliminar el margen donde sobra:
+    Si el margen superior no es necesario para la estructura general, lo ideal es eliminar ese margen superior en todas las pestañas de la biblioteca para unificar la posición vertical con el interior de las colecciones.
+    ➤ Esto mejora la consistencia visual global.
+
+    Opción B – Añadir el margen donde falta:
+    Si el margen cumple una función estructural o facilita otras alineaciones, entonces se debe añadir ese mismo margen superior al interior de las colecciones para que los elementos (título, flecha, pestañas) se ubiquen en la misma posición vertical exacta que en el resto de apartados.
+
+🎯 Resultado esperado:
+Independientemente de la opción elegida, el objetivo es que la posición vertical del título y pestañas sea idéntica entre el interior de una colección y las demás secciones de la biblioteca. Esto elimina cualquier inconsistencia visual.
+✏️ Cambio del icono de edición del nombre de la colección
+🎯 Mejora del diseño:
+
+    El icono actual de lápiz para editar el nombre de la colección no es adecuado visualmente, ya que no está bien integrado con el título y rompe la armonía visual.
+
+    Se debe sustituir por un icono más simple y minimalista, como por ejemplo un icono de "editar texto" más discreto y lineal, sin relleno ni grosor innecesario.
+
+    Además, el icono debe estar perfectamente centrado verticalmente respecto al texto del título, formando una línea única, bien alineada y balanceada.
+
+🎨 Este cambio debe seguir el estilo general de la app: iconos simples, vectoriales, del mismo color que el texto del título (blanco) y alineados para mantener coherencia visual y jerárquica.

@@ -1,0 +1,78 @@
+Estética y estructura visual en la vista interna de una colección personalizada
+1. Color de fondo
+
+🔧 Requisito:
+
+    El color de fondo completo de la vista interna de cada colección (incluyendo cabecera, pestañas, botón “Añadir cita” y zona de citas) debe ser exactamente el mismo azul que el utilizado en el resto de apartados de la Biblioteca: “Todas”, “Favoritas” y “Memorizadas”.
+
+    Esto incluye que no debe existir ninguna diferencia visual entre la cabecera y el cuerpo, para que toda la pantalla parezca una única sección integrada, sin bloques separados.
+
+2. Flecha de retroceso y título de la colección
+
+🔧 Requisitos:
+
+    La flecha de retroceso debe:
+
+        Ser blanca.
+
+        Tener el mismo tamaño, grosor y color que el texto del título.
+
+        Estar alineada a la izquierda del título.
+
+        Estar ubicada en la misma posición vertical exacta que el título “Mi Biblioteca” en las otras secciones.
+
+    El título de la colección debe:
+
+        Usar la misma tipografía, tamaño, grosor, color y estilo que el título “Mi Biblioteca”.
+
+        Estar ubicado en la misma posición vertical exacta que el título “Mi Biblioteca”, de forma que ambos elementos (flecha y título) mantengan la misma estructura que en el resto de vistas de la Biblioteca.
+
+3. Icono para editar el nombre de la colección
+
+🔧 Requisito:
+
+    Junto al título de la colección debe colocarse un icono de edición (como un lápiz).
+
+    Este icono debe estar alineado verticalmente con el título, en la misma línea.
+
+    Al pulsarlo:
+
+        El nombre de la colección se vuelve editable directamente en línea.
+
+        No se debe abrir ninguna ventana emergente ni modal.
+
+        Al confirmar o perder el foco, el nuevo nombre se guarda automáticamente en la base de datos.
+
+4. Pestañas de navegación
+
+🔧 Requisitos:
+
+    Las pestañas “Todas”, “Favoritas”, “Memorizadas” y “Colecciones” deben:
+
+        Estar colocadas justo debajo del título, con un espaciado idéntico al de la pantalla principal de la biblioteca.
+
+        Usar la misma fuente, tamaño, grosor, color y estilo que las pestañas del resto de secciones.
+
+        Estar colocadas en la misma posición vertical exacta que las pestañas en la vista principal de “Mi Biblioteca”, garantizando una transición visual coherente.
+
+✅ Comportamiento esperado:
+
+    “Todas”, “Favoritas” y “Memorizadas” deben seguir funcionando como en el resto de la app, llevando a sus respectivas secciones.
+
+    La pestaña “Colecciones” debe llevar siempre a la pantalla general con todas las colecciones, nunca a una colección específica, incluso si el usuario no ha pulsado antes la flecha de retroceso.
+
+5. Espaciado general entre elementos
+
+🔧 Requisito:
+
+    Debe haber un espaciado uniforme y profesional entre:
+
+        El bloque de título/flecha.
+
+        Las pestañas de navegación.
+
+        El botón “Añadir cita”.
+
+        Y la lista de citas.
+
+    Todos los elementos deben estar organizados con el mismo margen vertical y alineación visual que se usa en la vista de “Mi Biblioteca”.

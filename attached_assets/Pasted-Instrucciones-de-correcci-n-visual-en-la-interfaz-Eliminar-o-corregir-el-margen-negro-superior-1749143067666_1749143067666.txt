@@ -1,0 +1,67 @@
+Instrucciones de corrección visual en la interfaz:
+
+    Eliminar o corregir el margen negro superior:
+
+        Actualmente, en la parte superior de la app aparece un margen negro que rompe con el diseño.
+
+        Este margen debe eliminarse o, como solución rápida, debe tener el mismo color que el fondo principal de la app, para integrarse visualmente.
+
+    Ajustar la posición de los indicadores inferiores (círculos de navegación):
+
+        Los 5 círculos que indican en qué página se encuentra el usuario están colocados demasiado abajo, cerca del borde del dispositivo.
+
+        Deben colocarse un poco más arriba, con un margen inferior constante que los separe claramente del borde de la pantalla o del área de navegación del sistema.
+
+
+
+Creación de nueva colección: diseño y comportamiento
+✅ Activación
+
+    Al pulsar el botón “+” ubicado en la esquina superior derecha de la pestaña Colecciones, o como celda inicial en el grid, se abrirá una ventana de creación de colección.
+
+✅ Requisitos visuales y funcionales
+1. Adaptada a móviles (formato 16:9 / 18:9)
+
+    La ventana debe comportarse como un modal o Bottom Sheet móvil, sin aspecto de escritorio o ventana flotante genérica.
+
+    No debe sobresalir ni horizontal ni verticalmente de los márgenes visuales definidos por la app, es decir:
+
+        Ancho máximo: lo mismo que ocupan dos celdas de colección juntas (es decir, el ancho total del grid con sus márgenes laterales).
+
+        Altura: adaptativa, respetando los safeAreaInsets del sistema y limitada para no tapar la pantalla completa.
+
+2. Contenido de la ventana
+
+Dentro del modal deben incluirse los siguientes campos:
+
+    Nombre de la colección: campo obligatorio.
+
+    Imagen / miniatura: campo opcional con tres opciones:
+
+        Subir imagen desde el dispositivo móvil.
+
+        Pegar o introducir una URL de imagen externa.
+
+        Elegir una imagen predefinida ofrecida por la app (una pequeña galería de miniaturas sugeridas).
+
+3. Interacción y apariencia
+
+    La interfaz debe ser completamente táctil (sin hover ni comportamientos de escritorio).
+
+    Botones grandes y fácilmente accesibles para el pulgar.
+
+    Bordes suaves, fuentes claras y componentes consistentes con el resto de la app.
+
+    Debe evitar cualquier solapamiento visual o salida de los márgenes establecidos.
+
+📌 Resumen
+
+    La ventana para crear una colección debe ser:
+
+        Una ventana emergente adaptada a móvil, tipo Bottom Sheet.
+
+        Que ocupe el ancho exacto que ocupan 2 colecciones en el grid.
+
+        Que no sobresalga de los márgenes verticales ni laterales.
+
+        Que tenga un diseño táctil, limpio y proporcional, sin ningún elemento que recuerde a un flujo de escritorio.

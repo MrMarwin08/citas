@@ -1,0 +1,48 @@
+Ajustes visuales y estructurales en la vista de una colección
+1. Título de la colección y flecha de retroceso
+
+    En otras pestañas como “Mi Biblioteca” no se utiliza flecha de retroceso, pero en las colecciones sí debe incluirse una flecha para regresar a la vista general de colecciones.
+
+    Actualmente, la flecha y el título de la colección no siguen el estilo visual unificado del resto de la aplicación.
+
+🔧 Requisitos:
+
+    El texto del título de la colección debe tener:
+
+        Mismo tamaño, fuente, color, grosor y alineación vertical que el título "Mi Biblioteca".
+
+    A la izquierda del título, debe colocarse una flecha de retroceso con:
+
+        El mismo color y tamaño que el texto del título, de forma que ambos elementos se integren visualmente.
+
+    Al pulsar la flecha, el usuario será redirigido a la vista general con todas las colecciones.
+
+2. Pestañas de navegación (Todas, Favoritas, Memorizadas, Colecciones)
+
+    Las pestañas ya están presentes pero no mantienen la estética ni la estructura de las secciones anteriores de la Biblioteca.
+
+    Actualmente están demasiado cercanas al botón “Añadir cita”, provocando una distribución poco clara.
+
+🔧 Requisitos:
+
+    Las pestañas deben replicar exactamente el estilo de las secciones anteriores:
+
+        Tipografía, tamaño, espaciado, alineación y color iguales a los utilizados en la vista principal de la Biblioteca.
+
+    Debe haber suficiente separación visual y funcional entre las pestañas y el botón para añadir citas.
+
+    La funcionalidad de las pestañas debe mantenerse:
+
+        “Todas”, “Favoritas” y “Memorizadas” deben dirigir a sus respectivas vistas.
+
+        La pestaña “Colecciones” siempre debe llevar a la vista con todas las colecciones, sin importar si el usuario ya está dentro de una colección específica o no.
+
+3. Estética general y fondo de la vista de colección
+
+    El color de fondo de la cabecera y del cuerpo en la vista de una colección no coinciden actualmente, generando una separación visual marcada.
+
+🔧 Requisitos:
+
+    El fondo de la cabecera debe tener el mismo color que el resto del cuerpo (área de las citas) para lograr una apariencia unificada.
+
+    El diseño debe dar la sensación de que toda la pantalla es una sola área continua, sin bloques diferenciados o cortes visuales evidentes.

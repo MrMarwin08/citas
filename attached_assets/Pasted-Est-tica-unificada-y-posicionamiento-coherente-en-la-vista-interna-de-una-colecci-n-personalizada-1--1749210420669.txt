@@ -1,0 +1,81 @@
+Estética unificada y posicionamiento coherente en la vista interna de una colección personalizada
+1. Color de fondo uniforme
+
+🔧 Requisito:
+
+    El color de fondo de toda la vista interna de cada colección (cabecera, pestañas, botón “Añadir cita” y zona de citas) debe ser exactamente el mismo azul que se utiliza en las demás secciones de la Biblioteca: “Todas”, “Favoritas” y “Memorizadas”.
+
+    No debe existir contraste visual entre cabecera y cuerpo: toda la interfaz debe parecer una única sección continua y coherente.
+
+2. Eliminación del margen superior inconsistente
+
+🔧 Requisito:
+
+    Actualmente, la vista principal de la Biblioteca presenta un margen superior (espacio entre el borde superior de pantalla y el inicio del contenido) que no está presente en la vista interna de las colecciones.
+
+    Este margen debe ser eliminado en toda la app para unificar la presentación visual y evitar confusión respecto a la posición vertical de los elementos.
+
+    Una vez eliminado, se deben reubicar todos los elementos internos de cada colección (flecha, título, pestañas, botón añadir y citas) para que coincidan exactamente en su altura vertical con sus equivalentes de otras pestañas de la Biblioteca.
+
+3. Flecha de retroceso y título de la colección
+
+🔧 Requisitos:
+
+    La flecha de retroceso debe:
+
+        Tener el mismo color blanco, tamaño, grosor y estilo visual que el título.
+
+        Estar alineada a la izquierda del título y en la misma posición vertical exacta que el título “Mi Biblioteca” en otras vistas.
+
+    El título de la colección debe:
+
+        Usar la misma tipografía, color, grosor y tamaño que “Mi Biblioteca”.
+
+        Estar ubicado en la misma posición vertical exacta para mantener coherencia visual total.
+
+
+5. Pestañas de navegación
+
+🔧 Requisitos:
+
+    Las pestañas “Todas”, “Favoritas”, “Memorizadas” y “Colecciones” deben:
+
+        Aparecer inmediatamente debajo del título.
+
+        Tener exactamente el mismo estilo, tamaño, color, formato y disposición horizontal que las pestañas en la vista principal de la Biblioteca.
+
+        Estar ubicadas en la misma posición vertical exacta que en el resto de vistas.
+
+✅ Funcionamiento:
+
+    Las pestañas “Todas”, “Favoritas” y “Memorizadas” deben seguir funcionando igual que en las demás secciones.
+
+    La pestaña “Colecciones” debe llevar siempre a la pantalla de todas las colecciones, nunca permanecer dentro de una colección específica, incluso si el usuario no ha usado la flecha de retorno.
+
+6. Espaciado entre elementos y análisis técnico
+
+🔧 Requisitos:
+
+    Debe haber un espaciado visualmente limpio y estético entre:
+
+        El bloque flecha/título.
+
+        Las pestañas.
+
+        El botón “Añadir cita”.
+
+        La lista de citas.
+
+    Todos los elementos deben analizarse en código para obtener sus estilos exactos (color, tamaño, posición) usados en la vista de “Mi Biblioteca”.
+
+    Una vez identificados, deben aplicarse exactamente los mismos valores (posición vertical, márgenes, paddings y colores) en la vista de cada colección.
+
+✅ Resumen profesional para el equipo técnico o IA implementadora:
+
+    Analizar visual y técnicamente el código fuente de las secciones de la Biblioteca (especialmente “Mi Biblioteca”) para obtener valores exactos de estilos y posiciones.
+
+    Eliminar el margen superior de la app que causa desalineación entre secciones.
+
+    Reubicar todos los elementos de la vista de colección (flecha, título, pestañas, botón, citas) para que coincidan en altura vertical exacta y color de fondo con el resto de la Biblioteca.
+
+    Mantener una interfaz coherente, fluida y completamente alineada con la experiencia del usuario en el resto de la app.

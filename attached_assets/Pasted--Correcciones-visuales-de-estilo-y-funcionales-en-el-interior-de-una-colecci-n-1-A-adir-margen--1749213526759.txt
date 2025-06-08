@@ -1,0 +1,67 @@
+ Correcciones visuales, de estilo y funcionales en el interior de una colección
+1. 🧩 Añadir margen superior dentro de la colección
+
+Actualmente, el interior de cada colección no presenta un margen superior entre el borde superior de la pantalla y el título de la colección, a diferencia del resto de apartados de la aplicación, como “Mi Biblioteca”. Esta ausencia provoca una desalineación visual y genera la falsa sensación de que el título y los elementos asociados están más altos de lo normal.
+
+🔧 Solución:
+
+    Se debe añadir un margen superior al interior de cada colección que sea igual al margen superior presente en el resto de la aplicación (es decir, en las secciones como “Mi Biblioteca”, “Favoritas”, “Memorizadas”, etc.).
+
+    Si no es posible determinar exactamente el tamaño del margen del resto de apartados, se utilizará como referencia la altura de una letra mayúscula del mismo título (por ejemplo, la altura visual de “Mi Biblioteca”).
+
+    Este margen debe aplicarse de forma coherente en todas las colecciones, asegurando una alineación vertical uniforme en toda la aplicación.
+
+2. 🎨 Alineación y estilo de los elementos del encabezado
+
+Actualmente, en el encabezado del interior de una colección, tanto la flecha de retroceso como el icono de edición del nombre no coinciden en grosor, tamaño ni estilo con el texto del título (nombre de la colección). Además, no están correctamente alineados verticalmente, lo cual afecta a la estética y profesionalidad de la interfaz.
+
+🔧 Solución:
+
+    La flecha de retorno debe:
+
+        Tener el mismo grosor de trazo, color blanco y tamaño visual que el texto del título.
+
+        Estar alineada verticalmente con el texto del nombre de la colección.
+
+    El icono de edición debe:
+
+        Estar alineado verticalmente con el texto del título y con la flecha, manteniendo el mismo estilo gráfico.
+
+    Los tres elementos (flecha, título e icono de edición) deben quedar perfectamente centrados entre sí en altura, siguiendo el estilo y proporciones ya implementadas en el resto de la app (por ejemplo, en el encabezado de “Mi Biblioteca”).
+
+3. 🧬 Vinculación del nombre de colección con la base de datos
+
+Actualmente, al intentar editar el nombre de una colección, el nuevo valor no se guarda correctamente en la base de datos, lo que impide que el cambio persista y se refleje en la interfaz general.
+
+🔧 Solución:
+
+    Se debe vincular correctamente el evento de edición del nombre de la colección con la base de datos PostgreSQL.
+
+    El cambio debe:
+
+        Actualizar el campo correspondiente en la tabla de colecciones.
+
+        Reflejarse de forma inmediata en la interfaz tras la confirmación.
+
+    No se debe utilizar una ventana emergente para este cambio. El nombre debe poder editarse directamente desde el encabezado, en línea y con validación.
+
+4. 🔁 Comportamiento correcto de la pestaña "Colecciones"
+
+Actualmente, estando dentro de una colección, si el usuario pulsa la pestaña "Colecciones", no se redirige correctamente a la vista general de todas las colecciones, lo cual confunde la navegación.
+
+🔧 Solución:
+
+    La pestaña "Colecciones", esté donde esté el usuario, debe redirigir siempre a la vista general de todas las colecciones con sus miniaturas, cumpliendo exactamente la misma función que la flecha de retroceso.
+
+    Esto debe ocurrir incluso si el usuario ya se encuentra dentro de una colección.
+
+    De este modo, la pestaña "Colecciones" funcionará como una vía constante y clara de retorno al índice principal de colecciones.
+
+🧪 Contexto técnico de la aplicación
+
+    Tipo de app: Multiplataforma (iOS y Android)
+
+    Formato visual: Exclusivamente para móviles (relación de aspecto vertical 16:9 / 18:9)
+
+    Base de datos funcional:
+    postgresql://neondb_owner:npg_qOIUAGwW4N9p@ep-cool-dust-a2xjgv3q-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require

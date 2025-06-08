@@ -1,0 +1,75 @@
+Instrucciones técnicas: sistema de arrastre y optimización del interfaz de posición de citas
+🔄 Funcionalidad del cuarto botón: arrastre de citas
+
+    El cuarto botón de la interfaz de control será un manejador de arrastre que, al ser mantenido presionado (por dedo o cursor), permitirá mover exclusivamente la cita correspondiente.
+
+    Al iniciar el arrastre:
+
+        La cita se elevará ligeramente mediante animación, indicando que está siendo manipulada.
+
+        Seguirá el movimiento vertical del dedo o cursor, permaneciendo visualmente anclada al punto de contacto.
+
+        La cita deberá colocarse automáticamente en la primera capa visual (z-index elevado), de modo que flote por encima del resto de citas.
+
+    Al soltar:
+
+        Si el desplazamiento ha sido suficiente para detectar una intención de reordenamiento, la cita se insertará en la posición indicada por la guía visual (por ejemplo, una línea o espacio entre citas).
+
+        Si no se ha desplazado lo suficiente, se considerará una cancelación del movimiento, y la cita volverá a su posición original sin cambios.
+
+📏 Reducción y eficiencia del interfaz de posición
+
+    El interfaz de botones de movimiento (flechas, número y botón de arrastre) debe ser rediseñado para ser lo más delgado posible:
+
+        El ancho total del módulo debe reducirse al mínimo necesario.
+
+        La casilla de número debe ocupar únicamente el espacio del número que contiene, sin márgenes internos innecesarios.
+
+        Las flechas y el icono de arrastre deben ser pequeños y visualmente ligeros, sin perder funcionalidad táctil.
+
+📐 Ubicación optimizada del interfaz de posición
+
+    El interfaz de control de posición está actualmente dentro del contenedor visual de la cita (la tarjeta). Para optimizar el espacio de lectura y evitar espacios desaprovechados:
+
+        Debe ubicarse lo más pegado posible al borde izquierdo de la pantalla o del contenedor padre.
+
+        Si es necesario, puede solaparse parcialmente sobre la tarjeta de la cita, pero sin formar parte estructural interna del contenedor (es decir, sin estar dentro del padding o margin interno de la tarjeta).
+
+❌ Esto debe evitarse:
+
+    Margen innecesario entre el interfaz de posición y el borde izquierdo de la pantalla.
+
+    Margen interior excesivo entre el interfaz y la cita.
+
+    La suma de:
+
+        El margen izquierdo externo de la tarjeta,
+
+        El margen entre la tarjeta y el interfaz de posición, y
+
+        El margen interno del propio interfaz,
+
+    no debe generar un espacio desaprovechado.
+
+✅ Cómo debe hacerse correctamente:
+
+    El módulo de control de posición debe estar alineado directamente al borde izquierdo de la pantalla o del contenedor principal, con un margen mínimo, apenas perceptible (ej. 1–3 px).
+
+    Si se requiere, puede superponerse parcialmente sobre la tarjeta para maximizar el espacio visual de la cita.
+
+    Nunca debe integrarse dentro del interior del componente de la tarjeta, ni ocupar un bloque con márgenes amplios entre ambos elementos.
+
+🎯 Objetivo final
+
+    Garantizar que la interfaz de ordenación:
+
+        Sea compacta, funcional y visualmente clara.
+
+        No reduzca espacio útil de lectura de las citas.
+
+        Permita una interacción táctil fluida, precisa y natural al mover y reordenar citas en pantalla vertical móvil.
+
+Tipo de aplicación: Multiplataforma (iOS y Android)
+Formato objetivo: Solo dispositivos móviles (relación de aspecto vertical, 16:9 / 18:9)
+Base de datos funcional:
+postgresql://neondb_owner:npg_qOIUAGwW4N9p@ep-cool-dust-a2xjgv3q-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require

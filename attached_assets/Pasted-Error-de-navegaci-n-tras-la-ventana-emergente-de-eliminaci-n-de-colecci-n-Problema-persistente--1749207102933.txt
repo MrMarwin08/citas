@@ -1,0 +1,53 @@
+Error de navegación tras la ventana emergente de eliminación de colección
+
+    Problema persistente:
+    Tras pulsar “Eliminar” o “Cancelar” en la ventana emergente de confirmación para borrar una colección, se sigue accediendo de forma involuntaria a una colección.
+
+    Observación adicional:
+    El error parece estar provocado por uno de estos dos factores (o ambos):
+
+        Que el icono de la papelera roja, al ser pulsado, también acceda a la colección.
+
+        O bien que, al cerrarse la ventana emergente, se activa erróneamente la acción de abrir la colección subyacente.
+
+    Requisito:
+    Se debe revisar a fondo el flujo de eventos al pulsar el icono de eliminación y al cerrar la ventana emergente, asegurando que:
+
+        El evento no se propague al contenedor de la colección.
+
+        Y que no se ejecute ningún evento de navegación mientras la ventana emergente está visible, ni justo en el instante de cerrarse.
+
+📌 Cabecera y estructura visual al acceder a una colección
+Estructura requerida de la vista al acceder a una colección específica:
+
+    Encabezado superior (cabecera fija):
+
+        Debe incluir:
+
+            A la izquierda, una flecha de retorno con el mismo color, tamaño y estilo que el título principal anterior (“Mi Biblioteca”).
+
+            A su derecha, el nombre de la colección, con la misma tipografía, tamaño, color y posición vertical que el título “Mi Biblioteca” en otras secciones.
+
+        Este encabezado debe formar parte visual del mismo bloque que el fondo de la colección, sin diferencias de color entre cabecera y cuerpo (ya indicado en tareas anteriores).
+
+    Barra de pestañas justo debajo:
+
+        Debe mostrar las cuatro pestañas: Todas, Favoritas, Memorizadas y Colecciones, con:
+
+            El mismo diseño visual (tipografía, tamaño, color, espaciado y posición) que en las vistas anteriores.
+
+        Comportamiento:
+
+            Al pulsar “Todas”, “Favoritas” o “Memorizadas”, se accede a sus respectivas vistas.
+
+            Al pulsar “Colecciones”, se regresa siempre a la pantalla general de todas las colecciones, nunca a una colección específica, incluso si no se ha usado previamente la flecha de volver.
+
+    Contenido de la colección (parte scrolleable):
+
+        Justo debajo de las pestañas, se debe mostrar:
+
+            El botón “Añadir cita”.
+
+            Y debajo, la lista de citas de la colección (zona scrolleable, como ya se ha especificado previamente).
+
+        El encabezado, las pestañas y el botón “Añadir cita” deben mantenerse fijos al hacer scroll.

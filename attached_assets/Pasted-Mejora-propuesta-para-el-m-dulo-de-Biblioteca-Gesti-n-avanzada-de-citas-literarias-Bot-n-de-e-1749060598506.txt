@@ -1,0 +1,47 @@
+Mejora propuesta para el módulo de Biblioteca – Gestión avanzada de citas literarias
+
+    Botón de eliminación de citas guardadas:
+
+Se solicita añadir un botón de eliminación individual para cada cita almacenada en la biblioteca.
+Este botón debe:
+
+    Mantener coherencia visual con el diseño y el sistema de estilos actual de la aplicación (color, tipografía, iconografía, estados hover/pressed).
+
+    Estar ubicado de forma no intrusiva, garantizando una experiencia de usuario fluida y evitando interferencias con otras funcionalidades (como favoritos o memorizadas).
+
+    Nuevo apartado: "Mi Colección" (dentro de Biblioteca):
+
+Se propone incorporar una nueva sección llamada "Mi Colección", adicional a las pestañas actuales de Favoritas y Memorizadas. Esta funcionalidad permitirá a los usuarios organizar citas en colecciones personalizadas.
+
+Características de la funcionalidad:
+
+    Creación de colecciones personalizadas:
+
+        El usuario podrá crear múltiples colecciones, asignando a cada una un nombre y una miniatura representativa.
+
+        Las miniaturas podrán seleccionarse desde:
+
+            Archivos locales del dispositivo.
+
+            URL de imágenes externas.
+
+            Una galería de imágenes estándar predefinidas por la aplicación.
+
+    Diseño visual del listado de colecciones:
+
+        Las colecciones se visualizarán en una rejilla de tarjetas cuadradas, organizadas en filas de 2 columnas.
+
+        En caso de no existir ninguna colección, se mostrará una tarjeta inicial con un ícono "+", utilizada para crear nuevas colecciones.
+
+        Esta tarjeta de creación estará siempre visible, ocupando la primera posición de la cuadrícula (fila 1, columna 1), incluso cuando ya existan colecciones creadas.
+
+    Gestión de contenido dentro de cada colección:
+
+        Una vez creada la colección, se habilitará un botón de "+" dentro de cada tarjeta de colección para agregar citas.
+
+        Al pulsar este botón, se desplegará un listado con todas las citas de la biblioteca (sin metadatos adicionales como autor, categoría o acciones) para facilitar una selección rápida.
+
+    Integración de colección en el resto del sistema:
+
+    Se añadirá una opción adicional en los distintos apartados de citas dentro de la Biblioteca (favoritas, memorizadas, guardadas) para añadir la cita a una colección existente.
+    Esto permitirá una gestión integral y personalizada sin salir de los apartados tradicionales.

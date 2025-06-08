@@ -1,0 +1,39 @@
+ Instrucciones técnicas: corrección del margen izquierdo y ajuste de disposición horizontal
+🎯 Objetivo
+
+Optimizar el uso del espacio horizontal en pantalla, eliminando márgenes innecesarios y mejorando el equilibrio visual entre las citas y el interfaz de posición.
+📐 Ajustes necesarios
+
+    Reducción del margen izquierdo excesivo:
+
+        Actualmente existe un margen demasiado amplio entre el borde izquierdo de la pantalla y la caja de cada cita.
+
+        Este espacio desaprovechado desequilibra la interfaz y reduce el área útil de contenido.
+
+    Reubicación y alineación forzada a la izquierda:
+
+        Las cajas de las citas deben desplazarse obligatoriamente hacia la izquierda, acercándose al borde de la pantalla.
+
+        El interfaz de posición (contenedor con flechas, número y botón de arrastre) debe situarse directamente a la izquierda de la cita, alineado verticalmente con esta.
+
+    Ampliación de la caja de la cita:
+
+        Las cajas de las citas deben aumentar su ancho en 1 píxel, ganando mayor visibilidad y aprovechando mejor el espacio disponible.
+
+        Esta ampliación debe aplicarse de forma que mantenga la cita centrada en relación con el interfaz de posición.
+
+    Centrado conjunto:
+
+        El conjunto formado por interfaz de posición + caja de cita debe quedar centrado visualmente respecto al ancho total disponible.
+
+        Se debe asegurar que la cita esté alineada horizontalmente con el interfaz, sin desfases de altura.
+
+✅ Requisitos clave
+
+    Se debe eliminar el margen izquierdo innecesario entre el borde de la pantalla y la primera interfaz visible.
+
+    La cita y su interfaz de posición deben estar unidas visualmente como un único bloque funcional.
+
+    La interfaz no puede seguir estando desplazada ni superpuesta de forma flotante, debe ser adyacente y exterior a la cita.
+
+    El sistema debe obligatoriamente aplicar este reordenamiento y expansión horizontal en todos los contextos (Todas, Favoritas, Memorizadas y Colecciones).

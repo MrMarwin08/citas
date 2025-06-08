@@ -1,0 +1,74 @@
+Correcciones y mejoras en la gestión y visualización de Colecciones:
+1. Eliminación del contador incorrecto (cero):
+
+    Estado actual:
+    En la vista general donde se muestran todas las colecciones (miniaturas), aparece un cero ("0") en la esquina superior derecha de cada colección.
+
+    Cambio solicitado:
+
+        Eliminar completamente ese número "0" que aparece en la esquina superior derecha de las miniaturas.
+
+        No debe mostrarse ningún número flotante ni elemento decorativo innecesario en esa posición.
+
+2. Corrección del contador de citas en texto inferior:
+
+    Estado actual:
+    Debajo del nombre de cada colección se muestra siempre el texto: "0 citas", aunque la colección tenga citas.
+
+    Cambio solicitado:
+
+        El texto debe reflejar el número real de citas contenidas en cada colección.
+
+        Por ejemplo:
+
+            Si una colección tiene 3 citas → debe mostrar: "3 citas".
+
+            Si tiene solo 1 → debe decir: "1 cita" (uso correcto del singular/plural).
+
+3. Mejora en la selección de imagen para la colección (miniatura):
+
+    Estado actual:
+    Al crear una colección, se puede elegir una imagen por defecto, pero no se puede deseleccionar ni cargar una imagen propia.
+
+    Cambios solicitados:
+
+        Añadir una opción en la ventana emergente de creación de colección para subir una imagen desde los archivos del dispositivo móvil.
+
+            Esta opción debe abrir el explorador de archivos del sistema para elegir imágenes locales.
+
+        Cuando se selecciona una imagen por defecto de la app:
+
+            Si el usuario vuelve a pulsar sobre la imagen seleccionada, esta debe deseleccionarse automáticamente.
+
+            Es decir, un segundo clic sobre la misma imagen la debe quitar como opción seleccionada, dejando el estado sin miniatura si el usuario así lo desea.
+
+4. Opciones funcionales dentro de una colección (acciones en cada cita):
+
+    Estado actual:
+    Las opciones de acción (Favorito, Memorizar, Compartir) están presentes pero no son funcionales dentro de cada cita de la colección.
+
+    Cambio solicitado:
+
+        Dentro de cada colección, cada cita debe tener disponibles las siguientes acciones funcionales:
+
+            Añadir a Favoritas → debe reflejarse correctamente en la pestaña "Favoritas".
+
+            Memorizar → debe reflejarse correctamente en la pestaña "Memorizadas".
+
+            Compartir → debe abrir el menú nativo de compartir del dispositivo para enviar la cita por:
+
+                WhatsApp
+
+                Instagram (si es posible)
+
+                Email
+
+                Otras apps compatibles disponibles en el sistema del usuario.
+
+        Estas opciones deben tener el mismo diseño, comportamiento y funcionalidad que en la pestaña "Todas".
+
+Consideraciones generales:
+
+    Todos los elementos deben seguir el diseño adaptado para dispositivos móviles en formato vertical 16:9 o 18:9, con márgenes adecuados y sin solapamiento entre componentes.
+
+    Las acciones deben aplicarse de forma inmediata y coherente en toda la app, reflejándose en tiempo real en sus respectivas pestañas ("Favoritas", "Memorizadas", etc.).

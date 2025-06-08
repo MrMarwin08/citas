@@ -1,0 +1,60 @@
+Visualización y gestión de contenido dentro de una Colección
+Acceso a la colección
+
+    Al pulsar sobre una colección personalizada, se abrirá una nueva vista de pantalla completa (tipo page route), no un modal ni ventana flotante.
+
+    Esta vista debe seguir exactamente el mismo diseño y proporciones móviles que las pestañas “Todas”, “Favoritas” o “Memorizadas”, adaptándose siempre al formato 16:9 o 18:9, sin barras negras ni márgenes incorrectos.
+
+    Habrá una flecha de retorno para volver a la pestaña "Colecciones", donde se muestran todas las colecciones del usuario.
+
+Diseño visual
+
+    Las citas se mostrarán en una sola columna vertical, ocupando el 100% del ancho disponible (como una lista).
+
+    Si la colección está vacía, se mostrará en primer lugar una tarjeta “+ Añadir cita”, con el mismo estilo visual que una cita (misma forma, altura, margen, tipografía), ocupando toda la fila.
+
+    Esta tarjeta se mantendrá visible incluso si ya hay citas añadidas.
+
+➕ Añadir citas a una colección
+
+    Al pulsar en la tarjeta “+ Añadir cita”, se abrirá una ventana emergente completamente adaptada a móviles:
+
+        Esta ventana debe respetar los márgenes y proporciones del diseño móvil, sin sobresalir del marco visual (máximo de ancho = lo que ocupe una citas).
+
+        No debe parecer un diseño de escritorio. No puede salir del marco 16:9 ni generar barras negras ni contenido desalineado.
+
+    En esta ventana se mostrarán todas las citas disponibles en la Biblioteca (desde la pestaña “Todas”), sin metadatos ni información adicional como autor, categoría o iconos de opciones.
+
+    Cada cita se mostrará como un bloque de texto simple, claro y legible.
+
+✔️ Interacción para seleccionar citas
+
+    Junto a cada cita habrá un botón “+”, que se convierte en un icono ✅ al seleccionarla.
+
+        Si se vuelve a pulsar, se desmarca y regresa al símbolo “+”.
+
+    Esto permite añadir o quitar varias citas de forma rápida y sin salir de la ventana.
+
+    No se necesitan pasos intermedios ni confirmaciones extra: la interacción debe ser ágil y optimizada para el uso táctil.
+
+✅ Resumen de requerimientos clave para evitar errores comunes:
+
+    Debe abrirse una nueva pantalla completa, no una ventana emergente flotante.
+
+    Todo debe estar totalmente adaptado a móviles (sin diseño de escritorio, sin solapamientos).
+
+    Las citas en la colección se listan en una sola columna, con estilo uniforme y scroll vertical.
+
+    El botón para añadir citas siempre está visible como una tarjeta más, incluso si ya hay otras citas.
+
+    El selector de citas:
+
+        Debe estar contenido dentro de los márgenes de la app.
+
+        No puede exceder el ancho de dos citas.
+
+        Muestra solo texto de las citas.
+
+        Permite marcar/desmarcar con botones "+" y "✅".
+
+    Incluye una flecha de retorno en la parte superior que permite volver a la pestaña “Colecciones” donde están listadas todas las colecciones del usuario.

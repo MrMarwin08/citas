@@ -1,0 +1,39 @@
+🧱 Unificación visual entre encabezado y cuerpo en la vista de colección
+
+    Problema actual:
+    El encabezado o cabecera fija en la vista de una colección (que contiene el nombre de la colección, la flecha de retorno y el botón “Añadir cita”) tiene un fondo blanco, lo cual genera un contraste notorio con el resto del apartado (la lista de citas), rompiendo la continuidad visual.
+
+    Requisito:
+    El color del encabezado debe ser exactamente el mismo que el del resto de la vista (zona de citas), de modo que todo el apartado parezca un solo bloque unificado, sin divisiones visibles entre cabecera y cuerpo.
+
+🚫 Prevención de errores al cerrar la ventana emergente de eliminación de colección
+
+    Problema actual:
+    Al eliminar una colección, aparece una ventana emergente de confirmación (con opciones “Cancelar” y “Eliminar”), pero al pulsar cualquiera de estas opciones:
+
+        La interfaz principal también detecta el toque, lo que provoca un error: se accede de forma involuntaria a una colección.
+
+    Requisito:
+
+        Mientras la ventana emergente esté visible:
+
+            Se debe desactivar completamente la posibilidad de tocar o interactuar con las miniaturas de las colecciones.
+
+        Una vez se cierre la ventana emergente:
+
+            Se debe establecer una pequeña espera de al menos 0,5 a 1 segundo antes de permitir nuevamente el acceso a las colecciones, para evitar toques accidentales residuales.
+
+🔄 Actualización automática del contador de citas en cada colección
+
+    Problema actual:
+    En la sección de miniaturas de colecciones, el número que indica cuántas citas hay en cada colección no se actualiza automáticamente al añadir o quitar citas, ni al volver a esa pantalla.
+
+    Requisito:
+
+        El contador debe actualizarse en tiempo real:
+
+            Cada vez que se añade o elimina una cita desde una colección.
+
+            Y cada vez que se accede de nuevo a la pestaña “Colecciones” donde se muestran las miniaturas.
+
+        Este contador debe reflejar exactamente el número actual de citas contenidas en cada colección.

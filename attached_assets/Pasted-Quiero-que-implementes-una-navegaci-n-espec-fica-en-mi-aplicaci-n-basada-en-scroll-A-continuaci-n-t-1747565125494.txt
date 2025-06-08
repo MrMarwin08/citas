@@ -1,0 +1,64 @@
+Quiero que implementes una navegación específica en mi aplicación basada en scroll. A continuación te explico de forma clara y precisa lo que quiero lograr:
+
+📌 CONTEXTO GENERAL:
+El apartado de scroll es el principal de la app y es el primero que aparece al acceder.
+
+Este apartado contiene varias “citas” o pantallas dentro de un scroll vertical.
+
+Los 5 apartados principales de la app solo deben ser accesibles desde la primera cita de este apartado de scroll.
+
+📌 REGLAS DE NAVEGACIÓN:
+Acceso a apartados limitado a la primera cita del scroll:
+
+El usuario solo podrá cambiar entre los 5 apartados (secciones principales) desde la primera cita del scroll vertical.
+
+Si el usuario está en una cita distinta (segunda en adelante), no podrá navegar entre apartados.
+
+No redirijas automáticamente al usuario a la primera cita si intenta cambiar de apartado desde una cita inferior. Simplemente no permitas la acción.
+
+Indicadores de navegación (círculos):
+
+Los círculos ya están implementados y actualmente se muestran en todas las citas del scroll.
+
+Modifica esto para que los círculos solo se muestren en la primera cita del scroll.
+
+El círculo correspondiente al apartado actual debe seguir resaltado como ya hace.
+
+Los círculos deben desaparecer automáticamente al hacer scroll hacia abajo (segunda cita o más).
+
+Flecha de retorno visible desde la segunda cita (solo en el apartado de scroll):
+
+Añade una flecha flotante (↩️) visible solo a partir de la segunda cita del scroll.
+
+Esta flecha debe estar visible exclusivamente en el apartado principal de scroll, no en los demás apartados de la app.
+
+Debe:
+
+Estar oculta mientras el usuario esté en la primera cita.
+
+Aparecer automáticamente cuando el usuario se desplace hacia abajo (segunda cita en adelante).
+
+Al pulsarla, hacer un scroll suave hacia la primera cita del scroll.
+
+Estéticamente debe integrarse bien con el diseño general: tamaño adecuado, posición (por ejemplo, en esquina inferior derecha), colores y estilo coherente.
+
+🧪 COMPORTAMIENTO ESPERADO:
+Navegación fluida, ordenada y controlada dentro del apartado de scroll.
+
+Elementos visuales (círculos y flecha) que aparecen o desaparecen automáticamente según la posición del scroll.
+
+La navegación entre apartados solo está activa en la primera cita del apartado de scroll.
+
+🧰 TECNOLOGÍA Y HERRAMIENTAS (si aplican):
+Usa controladores de scroll o listeners (ScrollController, onScroll, IntersectionObserver, etc.) para detectar en qué cita del scroll se encuentra el usuario.
+
+Asegúrate de que los elementos se rendericen condicionalmente según esa posición.
+
+La animación de retorno al primer scroll debe ser suave, no un salto brusco.
+
+🎨 DISEÑO:
+Asegúrate de que la flecha flotante esté bien posicionada y no interfiera con otros elementos.
+
+Usa una estética coherente con el resto de la app (colores, bordes, animaciones suaves).
+
+Los círculos deben desaparecer de forma natural, sin desajustes visuales, cuando el usuario haga scroll hacia abajo.

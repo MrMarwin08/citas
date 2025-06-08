@@ -1,0 +1,69 @@
+Cambios críticos de interfaz — Prioridad Alta
+1. ✅ Color de fondo uniforme en toda la app
+
+Objetivo: unificar la estética de fondo para lograr una apariencia moderna, coherente y sin cortes visuales.
+
+🛠️ Requisito técnico:
+
+    Se debe establecer el color de fondo principal global de la aplicación en HEX: #111827 (un azul oscuro casi negro).
+
+    Este color debe aplicarse como background color global para:
+
+        La vista raíz o contenedor principal (<SafeAreaView> o <View> raíz).
+
+        Todas las pantallas de navegación: Biblioteca, Todas, Favoritas, Memorizadas, Colecciones y vistas internas de colección.
+
+        Cualquier otro fondo que se defina mediante backgroundColor, incluyendo pantallas emergentes, headers fijos, modales o listas.
+
+🔄 Implementación recomendada:
+
+    En apps React Native o similares, establecer este color como una constante o valor en el tema global de estilos (ThemeProvider, tailwind.config.js, styled-components, etc.).
+
+    Asegurarse de que ningún componente individual overridee este fondo con otros colores como blanco o negro puro (#000000), salvo que esté justificado (p. ej. un botón puntual).
+
+// Ejemplo en React Native
+const appBackgroundColor = "#111827";
+
+<View style={{ flex: 1, backgroundColor: appBackgroundColor }}>
+  {/* ... */}
+</View>
+
+2. ❌ Eliminar la franja/marco/tira negra superior e inferior
+
+Objetivo: eliminar cualquier espacio o margen negro que rompe la continuidad visual del fondo en toda la app.
+
+🛠️ Descripción del problema:
+
+    En la interfaz actual aparece una franja o marco negro (posiblemente en la parte superior y/o inferior) que no coincide con el fondo azul oscuro definido, creando una ruptura visual no deseada.
+
+    Esta franja suele deberse a:
+
+        Valores incorrectos de paddingTop, paddingBottom o SafeAreaInsets.
+
+        Un color por defecto aplicado a StatusBar, SafeAreaView, o al root View de navegación que no ha sido sobreescrito.
+
+        Layouts donde el fondo no se expande a toda la pantalla (por flex: 1 ausente).
+
+🔄 Revisión y solución técnica:
+
+    Revisión del componente raíz de navegación y pantallas:
+
+        Asegurar que todos los <SafeAreaView> o <View> usan el fondo #111827.
+
+        Usar flex: 1 y paddingTop: 0, paddingBottom: 0 donde sea necesario para que el fondo cubra toda la pantalla.
+
+    Asegurar que StatusBar también tenga el mismo color:
+
+import { StatusBar } from 'react-native';
+
+<StatusBar backgroundColor="#111827" barStyle="light-content" />
+
+    Revisar si el marco negro está generado por configuración del NavigationContainer, Screen o SafeAreaProvider, y aplicar el color correcto en esas capas.
+
+✅ Resultado esperado:
+
+    La interfaz completa debe tener un fondo uniforme HEX: #111827 sin interrupciones ni bandas visibles.
+
+    Se elimina cualquier franja negra (inferior o superior) o borde no deseado, logrando un diseño más pulido, limpio y profesional.
+
+    Este fondo oscuro mejorará también la legibilidad del texto claro y la visualización de iconos o botones que se basen en contraste.

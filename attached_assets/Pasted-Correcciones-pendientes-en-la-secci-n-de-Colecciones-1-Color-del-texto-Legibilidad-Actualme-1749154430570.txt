@@ -1,0 +1,50 @@
+Correcciones pendientes en la sección de Colecciones
+1. Color del texto (Legibilidad):
+
+    Actualmente, los textos no tienen suficiente contraste sobre el fondo oscuro de la app.
+
+    Cambio solicitado:
+    Todos los textos dentro de:
+
+        Las citas en las colecciones.
+
+        La ventana emergente para añadir citas.
+        → Deben ser de color blanco (#FFFFFF) o un color muy similar (por ejemplo, gris muy claro) para asegurar una legibilidad clara y uniforme en todos los dispositivos.
+
+2. Botones inferiores de la ventana emergente (“Añadir cita”):
+
+    El botón que actualmente dice “Añadir” no ha sido renombrado como se solicitó anteriormente.
+
+    Cambio solicitado:
+    En la ventana emergente que se abre al pulsar “Añadir cita” en una colección:
+
+        El botón “Añadir” debe cambiar a “Guardar”.
+
+        El botón “Cancelar” debe mantenerse como está.
+        Esto refleja mejor que el usuario está editando la colección, no simplemente agregando.
+
+3. Funcionalidad y diseño de la ❌ (quitar cita de una colección):
+
+Estado actual (incorrecto):
+
+    La ❌ para quitar una cita de la colección:
+
+        No tiene la posición, tamaño ni diseño coherente con los demás iconos de acción de la cita.
+
+        No está alineada ni integrada correctamente.
+
+Cambio solicitado (detallado):
+
+    En cada cita dentro de una colección, debe haber una ❌ (X roja) en la parte inferior derecha, en lugar del icono de la papelera (que debe eliminarse completamente).
+
+    Esta ❌ debe servir exclusivamente para quitar la cita de esa colección, sin afectar su presencia en "Todas", "Favoritas" o "Memorizadas".
+
+    La posición vertical, tamaño, color, estilo y alineación de la ❌ deben ser idénticos a los otros botones de acción (como los de “Añadir a Favoritos”, “Memorizar” o “Compartir”), es decir:
+
+        Estar ubicados en la misma fila de acciones.
+
+        Tener el mismo tamaño y separación.
+
+        Seguir el mismo estilo de iconografía y color (rojo para indicar acción de eliminación o exclusión).
+
+    Esto asegura una experiencia visual y funcional coherente con el resto de la interfaz de la app.

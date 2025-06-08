@@ -1,0 +1,67 @@
+Sistema avanzado de reordenación de citas en toda la Biblioteca
+
+Todas las citas de la aplicación, tanto en las pestañas Todas, Favoritas, Memorizadas, como en cualquier Colección, deben incluir un sistema visual y funcional de reordenamiento manual.
+1. 📦 Sección de control de orden en cada cita
+
+A la derecha de cada cita aparecerá una pequeña interfaz compuesta por:
+
+    🔼 Una flecha hacia arriba: al pulsarla, la cita sube una posición.
+
+    🔽 Una flecha hacia abajo: al pulsarla, la cita baja una posición.
+
+    🔢 Una casilla numérica editable entre las dos flechas que indica la posición actual de la cita.
+
+Esta casilla debe permitir editar directamente el número para cambiar la posición sin ventanas emergentes ni confirmaciones adicionales.
+2. 🧠 Reorganización inteligente del resto de citas
+
+El sistema debe reorganizar automáticamente las demás citas para mantener una secuencia lógica sin duplicados:
+
+    Ejemplo: Si existen 8 citas y se cambia la posición de la cita número 2 a la posición 5:
+
+        La cita movida pasa a ocupar la posición 5.
+
+        Las citas que estaban en las posiciones 3, 4 y 5 suben una posición (ahora serán 2, 3 y 4).
+
+        Las citas 6, 7 y 8 mantienen su orden.
+
+Esto debe aplicarse tanto al editar la posición manualmente como al utilizar las flechas.
+
+Además, los números de posición se actualizarán automáticamente tras cada cambio.
+3. ✍️ Edición directa del número
+
+    Al tocar la casilla del número, el usuario podrá introducir una nueva posición manualmente.
+
+    El campo será editable en línea, sin abrir menús ni pantallas adicionales.
+
+    Al confirmar el nuevo número (por ejemplo, al hacer Enter o perder el foco), el sistema reorganizará dinámicamente las demás citas siguiendo la lógica descrita en el punto anterior.
+
+4. ☝️ Reordenamiento mediante pulsación prolongada (drag & drop táctil)
+
+El sistema también debe permitir cambiar el orden de las citas manteniendo pulsada una cita:
+
+    Al mantener pulsada una cita:
+
+        Esta se elevará ligeramente con una animación indicando que está en modo "movible".
+
+        A partir de ese momento seguirá el movimiento vertical del dedo o cursor, pero solo en dirección vertical.
+
+📍 Inserción precisa
+
+    Al mover una cita arrastrándola:
+
+        No se intercambiará su lugar con otra directamente.
+
+        En su lugar, podrá insertarse entre otras dos citas.
+
+        Si se suelta entre dos citas, se colocará exactamente en medio.
+
+        Si se suelta encima de otra cita, se determinará si colocarla arriba o debajo, según la mitad superior o inferior donde se haya soltado.
+
+Este sistema permitirá una organización muy precisa, con animaciones suaves que reflejen visualmente el nuevo orden y el desplazamiento de las demás citas en tiempo real.
+
+
+Todos los cambios de orden, ya sean mediante flechas, edición directa o arrastre táctil, deben actualizarse y persistirse inmediatamente en la base de datos PostgreSQL:
+Tipo de aplicación: Multiplataforma (iOS y Android)
+Formato objetivo: Solo dispositivos móviles (relación de aspecto vertical, 16:9 / 18:9)
+Base de datos funcional:
+postgresql://neondb_owner:npg_qOIUAGwW4N9p@ep-cool-dust-a2xjgv3q-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require

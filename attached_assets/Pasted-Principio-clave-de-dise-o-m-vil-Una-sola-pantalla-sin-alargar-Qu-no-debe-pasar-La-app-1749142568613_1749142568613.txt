@@ -1,0 +1,84 @@
+Principio clave de diseño móvil: "Una sola pantalla, sin alargar"
+🧩 ❌ Qué no debe pasar
+
+    La app no debe comportarse como una página web que se alarga verticalmente según el contenido o la pantalla.
+
+    No se debe preparar una única altura "larga" para intentar que funcione igual en todos los móviles.
+
+    Cuando esto se hace mal:
+
+        Aparecen espacios negros al final de la pantalla.
+
+        Algunas partes del contenido quedan ocultas o demasiado espaciadas.
+
+        En móviles más cortos, los elementos como filtros, botones o indicadores desaparecen o se solapan.
+
+📱 ✅ Qué sí debe pasar
+
+    La app debe estar diseñada como una pantalla cerrada y contenida que se ajusta automáticamente al alto del dispositivo, sin excederse.
+
+    Todos los elementos de la interfaz deben:
+
+        Ajustar su separación (espaciado, márgenes) dinámicamente.
+
+        Mantenerse visibles siempre, sin importar si el móvil es más alto o más corto.
+
+        No depender de un scroll vertical general de la página, excepto en áreas específicas.
+
+📦 Ejemplo visual para entenderlo
+
+Imagina una tienda online en un móvil:
+Elemento	Comportamiento deseado
+🧭 Encabezado	Siempre visible arriba
+🔘 Filtros y botones	Siempre fijos, alineados, adaptados al espacio
+🗃️ Área de productos	Aquí sí se puede hacer scroll
+
+Solo una parte concreta (por ejemplo, una lista de citas o productos) debe tener scroll, el resto de la interfaz debe estar fija y compacta, sin desplazarse, como una aplicación real nativa móvil.
+🧠 ¿Cómo se logra esto?
+
+    No usar un SingleChildScrollView general para toda la página: eso crea una web vertical.
+
+    Separar claramente la interfaz en zonas:
+
+        Header (barra superior, pestañas, título)
+
+        Filtros
+
+        Contenido scrolleable (la biblioteca, las citas, etc.)
+
+    El contenido que sí debe scrollearse (como las citas) se maneja dentro de una zona delimitada con Expanded y ListView.
+
+Ejemplo en Flutter:
+
+Column(
+  children: [
+    Header(),
+    Tabs(),
+    Filtros(),
+    Expanded(
+      child: ListView( // solo esto puede scrollearse
+        children: [...citas],
+      ),
+    ),
+  ],
+)
+
+⚠️ Elementos sensibles que siempre deben estar visibles
+
+    Logo / Nombre de sección
+
+    Pestañas: Todas / Favoritas / Memorizadas / Colecciones
+
+    Filtros por categoría o fecha
+
+    Botón + para añadir colección o cita
+
+    Indicadores de navegación de página (los 5 círculos)
+
+🔁 Comportamiento adaptativo esperado:
+
+    En móviles más largos, se puede aumentar la separación entre elementos (espaciadores, paddings).
+
+    En móviles más compactos, se deben compactar los márgenes, sin ocultar nada.
+
+    Pero nunca se debe expandir la app artificialmente para llenar espacio, ni generar scroll general cuando no es necesario.
